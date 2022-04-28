@@ -1,0 +1,23 @@
+program: train.py
+method: grid
+metric:
+  name: val_loss
+  goal: minimize
+parameters:
+  model:
+    values: ['SAGE']
+  learning_rate:
+    values: [0.1, 0.01, 0.001, 0.0001]
+  dropout:
+    values: [0.1, 0.2]
+  encoders:
+    values: [1, 2]
+  conv_layers:
+    values: [2, 3, 4, 6]
+  hidden_size:
+    values: [64, 128, 256]
+  decoders:
+    values: [1, 2]
+  stochastic_weight_avg:
+    values: [true, false]
+  
